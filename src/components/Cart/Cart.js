@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import LineItem from './LineItem';
+import LineItem from '../LineItem/LineItem';
+import './Cart.module.css';
 
 class Cart extends Component {
 

@@ -1,5 +1,6 @@
 import React from 'react';
-import Product from './Product';
+import Product from './Product/Product';
+import './Products.module.css';
 
 const products = ({products, addVariantToCart, client}) => {
     let theProducts = products.map((product) => {

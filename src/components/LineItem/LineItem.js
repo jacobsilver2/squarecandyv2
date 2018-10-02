@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './LineItem.module.css';
 
 class LineItem extends Component {
 

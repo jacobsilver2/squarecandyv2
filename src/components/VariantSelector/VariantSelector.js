@@ -1,4 +1,5 @@
 import React from 'react';
+import './VariantSelector.module.css';
 
 const variantSelector = ({option, handleOptionChange}) => (
     <select
