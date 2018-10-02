@@ -2,7 +2,7 @@ import React from 'react';
 import Product from './Product';
 
 const products = ({products, addVariantToCart, client}) => {
-    let products = products.map((product) => {
+    let theProducts = products.map((product) => {
         return (
             <Product 
                 addVariantToCart={addVariantToCart}
@@ -14,7 +14,7 @@ const products = ({products, addVariantToCart, client}) => {
     });
     return (
        <div className="Product-wrapper">
-           {products}
+           {theProducts}
        </div> 
     );
 }
