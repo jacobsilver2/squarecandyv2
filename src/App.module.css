@@ -4,8 +4,12 @@
   * ============================== */
  .App__header {
    background-color: #222;
-   background-image: url('https://unsplash.it/1000/300?image=823');
+   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/header.jpg");
+   height: 50%;
+   background-position: center;
+   background-repeat: no-repeat;
    background-size: cover;
+   position: relative;
    color: white;
    padding: 10px 10px;
  }
@@ -99,6 +103,14 @@
  
  .Flash__message_open {
    display: flex;
+ }
+
+ .About {
+  text-align: left;
+ }
+
+ .Contact {
+  text-align: left;
  }
  
  

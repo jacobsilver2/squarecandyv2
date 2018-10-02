@@ -81,9 +81,10 @@ class App extends Component {
               <button className={styles.App__view_cart} onClick={()=> this.setState({isCartOpen: true})}>Cart</button>
             </div>
           }
+          <div className={styles.About}>About</div>
+          <div className={styles.Contact}>Contact</div>
           <div className={styles.App__title}>
-            <h1>{this.state.shop.name}</h1>
-            <h2>{this.state.shop.description}</h2>
+            <h1>Square Candy</h1>
           </div>
         </header>
         <Products 
