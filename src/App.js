@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
+import Products from './components/Products';
+import Cart from './components/Cart';
 
 class App extends Component {
   state = {
@@ -73,8 +75,29 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        
-
+        <header className="App_header">
+          {!this.state.isCartOpen &&
+            <div className="App__view-cart-wrapper">
+              <button className="App__view-cart" onClick={()=> this.setState({isCartOpen: true})}>Cart</button>
+            </div>
+          }
+          <div className="App_title">
+            <h1>{this.state.shop.name}</h1>
+            <h2>{this.state.shop.description}</h2>
+          </div>
+        </header>
+        <Products 
+          products={this.state.products}
+          client={this.props.client}
+          addVariantToCart={this.addVariantToCart}
+        />
+        <Cart 
+          checkout={this.state.checkout}
+          isCartOpen={this.state.isCartOpen}
+          handleCartClose={this.handleCartClose}
+          updateQuantityInCart={this.updateQuantityInCart}
+          removeLineItemInCart={this.removeLineItemInCart}
+        />
       </div>
     );
   }

@@ -6,7 +6,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 const client = Client.buildClient({
-    storefrontAccessToken: process.env.SHOPIFY_ACCESS_TOKEN,
+    storefrontAccessToken: 'ffb8ab80b6733da9a541fcfff02af703',
     domain: 'jacobs-sample-store.myshopify.com'
   });
   
