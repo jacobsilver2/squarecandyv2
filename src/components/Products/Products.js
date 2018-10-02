@@ -1,6 +1,6 @@
 import React from 'react';
 import Product from './Product/Product';
-import './Products.module.css';
+import styles from './Products.module.css';
 
 const products = ({products, addVariantToCart, client}) => {
     let theProducts = products.map((product) => {
@@ -14,7 +14,7 @@ const products = ({products, addVariantToCart, client}) => {
         );
     });
     return (
-       <div className="Product-wrapper">
+       <div className={styles.Product_wrapper}>
            {theProducts}
        </div> 
     );

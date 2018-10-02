@@ -74,7 +74,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className={styles.App}>
         <header className={styles.App__header}>
           {!this.state.isCartOpen &&
             <div className={styles.App__view_cart_wrapper}>

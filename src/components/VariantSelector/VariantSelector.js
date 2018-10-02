@@ -1,9 +1,9 @@
 import React from 'react';
-import './VariantSelector.module.css';
+import styles from './VariantSelector.module.css';
 
 const variantSelector = ({option, handleOptionChange}) => (
     <select
-        className="Product__option"
+        className={styles.Product__option}
         name={option.name}
         key={option.name}
         onChange={handleOptionChange}

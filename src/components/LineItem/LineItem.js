@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './LineItem.module.css';
+import styles from  './LineItem.module.css';
 
 class LineItem extends Component {
 
@@ -16,29 +16,29 @@ class LineItem extends Component {
 
     render() {
         return (
-            <li className="Line-item">
-            <div className="Line-item__img">
+            <li className={styles.Line_item}>
+            <div className={styles.Line_item__img}>
               {this.props.line_item.variant.image ? <img src={this.props.line_item.variant.image.src} alt={`${this.props.line_item.title} product shot`}/> : null}
             </div>
-            <div className="Line-item__content">
-              <div className="Line-item__content-row">
-                <div className="Line-item__variant-title">
+            <div className={styles.Line_item__content}>
+              <div className={styles.Line_item__content_row}>
+                <div className={styles.Line_item__variant_title}>
                   {this.props.line_item.variant.title}
                 </div>
-                <span className="Line-item__title">
+                <span className={styles.Line_item__title}>
                   {this.props.line_item.title}
                 </span>
               </div>
-              <div className="Line-item__content-row">
-                <div className="Line-item__quantity-container">
-                  <button className="Line-item__quantity-update" onClick={() => this.decrementQuantity(this.props.line_item.id)}>-</button>
-                  <span className="Line-item__quantity">{this.props.line_item.quantity}</span>
-                  <button className="Line-item__quantity-update" onClick={() => this.incrementQuantity(this.props.line_item.id)}>+</button>
+              <div className={styles.Line_item__content_row}>
+                <div className={styles.Line_item__quantity_container}>
+                  <button className={styles.Line_item__quantity_update} onClick={() => this.decrementQuantity(this.props.line_item.id)}>-</button>
+                  <span className={styles.Line_item__quantity}>{this.props.line_item.quantity}</span>
+                  <button className={styles.Line_item__quantity_update} onClick={() => this.incrementQuantity(this.props.line_item.id)}>+</button>
                 </div>
-                <span className="Line-item__price">
+                <span className={styles.Line_item__price}>
                   $ { (this.props.line_item.quantity * this.props.line_item.variant.price).toFixed(2) }
                 </span>
-                <button className="Line-item__remove" onClick={()=> this.props.removeLineItemInCart(this.props.line_item.id)}>×</button>
+                <button className={styles.Line_item__removestyles} onClick={()=> this.props.removeLineItemInCart(this.props.line_item.id)}>×</button>
               </div>
             </div>
           </li>

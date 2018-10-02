@@ -1,6 +1,6 @@
 /* LINE ITEMS
   * ============================== */
-  .Line-item {
+  .Line_item {
     margin-bottom: 20px;
     overflow: hidden;
     backface-visibility: visible;
@@ -10,7 +10,7 @@
     transition: opacity 0.2s ease-in-out;
   }
   
-  .Line-item__img {
+  .Line_item__img {
     width: 65px;
     height: 65px;
     border-radius: 3px;
@@ -21,19 +21,19 @@
     position: absolute;
   }
   
-  .Line-item__content {
+  .Line_item__content {
     width: 100%;
     padding-left: 75px;
   }
   
-  .Line-item__content-row {
+  .Line_item__content_row {
     display: inline-block;
     width: 100%;
     margin-bottom: 5px;
     position: relative;
   }
   
-  .Line-item__variant-title {
+  .Line_item__variant_title {
     float: right;
     font-weight: bold;
     font-size: 11px;
@@ -41,13 +41,13 @@
     color: #767676;
   }
   
-  .Line-item__title {
+  .Line_item__title {
     color: #4E5665;
     font-size: 15px;
     font-weight: 400;
   }
   
-  .Line-item__price {
+  .Line_item__price {
     line-height: 23px;
     float: right;
     font-weight: bold;
@@ -55,13 +55,13 @@
     margin-right: 40px;
   }
   
-  .Line-item__quantity-container {
+  .Line_item__quantity_container {
     border: 1px solid #767676;
     float: left;
     border-radius: 3px;
   }
   
-  .Line-item__quantity-update {
+  .Line_item__quantity_update {
     color: #767676;
     display: block;
     float: left;
@@ -78,11 +78,11 @@
     text-align: center;
   }
   
-  .Line-item__quantity-update-form {
+  .Line_item__quantity_update_form {
     display: inline;
   }
   
-  .Line-item__quantity {
+  .Line_item__quantity {
     color: black;
     width: 38px;
     height: 21px;
@@ -100,7 +100,7 @@
     border-radius: 0;
   }
   
-  .Line-item__remove {
+  .Line_item__remove {
     position: absolute;
     right: 0;
     top: 0;
@@ -111,7 +111,7 @@
     opacity: 0.5;
   }
   
-  .Line-item__remove:hover {
+  .Line_item__remove:hover {
     opacity: 1;
     cursor: pointer;
   }
