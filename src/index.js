@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Client from 'shopify-buy';
-// import '../../shared/app.css';
+import './App.css'
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
