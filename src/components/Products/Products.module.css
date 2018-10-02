@@ -3,8 +3,11 @@
   .Product_wrapper {
     max-width: 900px;
     margin: 40px auto 0;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 50px;
+    grid-auto-rows: minmax(400px, auto);
+    /* flex-wrap: wrap; */
     justify-content: center;
   }
 

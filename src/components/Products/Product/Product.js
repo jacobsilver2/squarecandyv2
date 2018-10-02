@@ -58,7 +58,6 @@ class Product extends Component {
                 {this.props.product.images.length ? <img src={variantImage.src} alt={`${this.props.product.title}`}/> : null}
                 <h5 className={styles.Product__title}>{this.props.product.title}</h5>
                 <span className={styles.Product__price}>${variant.price}</span>
-                {variantSelectors}
                 <label className={styles.Product__option}>
                     Quantity
                     <input min="1" type="number" defaultValue={variantQuantity} onChange={this.handleQuantityChange}></input>

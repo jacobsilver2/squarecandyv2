@@ -3,9 +3,14 @@
     margin-left: 1%;
     margin-right: 1%;
     margin-bottom: 3%;
+    border-style: solid;
+    border-width: 1px;
+    background: whitesmoke;
+    opacity: 0.9;
   }
   
   .Product__title {
+    text-align: center;
     font-size: 1.3rem;
     margin-top: 1rem;
     margin-bottom: 0.4rem;
@@ -13,6 +18,7 @@
   }
   
   .Product__price {
+    text-align: center;
     display: block;
     font-size: 1.1rem;
     opacity: 0.5;
