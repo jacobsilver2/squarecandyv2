@@ -1,10 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import Client from 'shopify-buy';
+// import '../../shared/app.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const client = Client.buildClient({
+    storefrontAccessToken: process.env.SHOPIFY_ACCESS_TOKEN,
+    domain: 'jacobs-sample-store.myshopify.com'
+  });
+  
+
+ReactDOM.render(<App client={client}/>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
