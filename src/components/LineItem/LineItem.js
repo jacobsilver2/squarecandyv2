@@ -5,7 +5,7 @@ class LineItem extends Component {
 
     decrementQuantity = lineItemId => {
         const updatedQuantity = this.props.line_item.quantity - 1;
-        this.props.updatedQuantityInCart(lineItemId, updatedQuantity);
+        this.props.updateQuantityInCart(lineItemId, updatedQuantity);
     }
 
     incrementQuantity = lineItemId => {
