@@ -44,15 +44,15 @@ class Product extends Component {
         let variantImage = this.state.selectedVariantImage || this.props.product.images[0];
         let variant = this.state.selectedVariant || this.props.product.variants[0];
         let variantQuantity = this.state.selectedVariantQuantity || 1;
-        let variantSelectors = this.props.product.options.map((option) => {
-            return (
-                <VariantSelector 
-                    handleOptionChange={this.handleOptionChange}
-                    key={option.id.toString()}
-                    option={option}
-                />
-            );
-        });
+        // let variantSelectors = this.props.product.options.map((option) => {
+        //     return (
+        //         <VariantSelector 
+        //             handleOptionChange={this.handleOptionChange}
+        //             key={option.id.toString()}
+        //             option={option}
+        //         />
+        //     );
+        // });
         return (
             <div className={styles.Product}>
                 <div className={styles.Product__image__container}>
