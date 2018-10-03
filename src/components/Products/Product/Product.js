@@ -55,15 +55,19 @@ class Product extends Component {
         });
         return (
             <div className={styles.Product}>
-                {this.props.product.images.length ? <img src={variantImage.src} alt={`${this.props.product.title}`}/> : null}
+                <div className={styles.Product__image__container}>
+                    {this.props.product.images.length ? <img src={variantImage.src} alt={`${this.props.product.title}`}/> : null}
+                </div>
                 <h5 className={styles.Product__title}>{this.props.product.title}</h5>
                 <span className={styles.Product__price}>${variant.price}</span>
-                <label className={styles.Product__option}>
-                    Quantity
-                    <input min="1" type="number" defaultValue={variantQuantity} onChange={this.handleQuantityChange}></input>
-                </label>
+                <div className={styles.Product__option_align}>
+                    <label className={styles.Product__option}>
+                        Quantity
+                        <input className={styles.Product__option__textbox} min="1" type="number" defaultValue={variantQuantity} onChange={this.handleQuantityChange}></input>
+                    </label>
+                </div>
                 <div className={styles.button_align}>
-                <button className={`${styles.Product__buy} ${styles.button}`} onClick={() => this.props.addVariantToCart(variant.id, variantQuantity)}>Add to Cart</button>
+                    <button className={`${styles.Product__buy} ${styles.button}`} onClick={() => this.props.addVariantToCart(variant.id, variantQuantity)}>Add to Cart</button>
                 </div>
             </div>
         );

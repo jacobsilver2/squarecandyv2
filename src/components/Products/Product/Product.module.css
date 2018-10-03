@@ -2,6 +2,8 @@
   /* display: block; */
   vertical-align: middle;
   transform: translateZ(0);
+  background: whitesmoke;
+  opacity: 20%;
   /* box-shadow: 0 0 1px rgba(0, 0, 0, 0); */
   /* backface-visibility: hidden; */
   /* background: #bfbfbf */
@@ -37,6 +39,15 @@
     opacity: 0.5;
     margin-bottom: 0.4rem;
   }
+
+  .Product__image__container {
+    height: 200px; 
+    
+  }
+
+  .Product__option_align {
+    text-align: center;
+  }
   
   .Product__quantity {
     display: block;
@@ -44,17 +55,20 @@
     margin-bottom: 10px;
   }
 
+    .Product__option__textbox {
+    width: 50px;
+  }
+
   .button_align {
     position: relative;
-    /* right: 0;
-    bottom: 0; */
-    /* text-align: center; */
+    
   }
 
   .button {
     position: relative;
-    bottom: -50px;
-    right: -30px;
+    bottom: 0px;
+    margin-left:-50px;
+    left: 50%;
     background-color: #2752ff;
     color: white;
     border: none;
