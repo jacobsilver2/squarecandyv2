@@ -1,0 +1,71 @@
+.ProductCard {
+    vertical-align: middle;
+    background: whitesmoke;
+    opacity: 20%;
+    box-shadow: 10px 5px 40px 20px darken(#341cac, 5%);
+    margin: 60px auto;
+}
+
+.ProductCard:hover,
+.ProductCard:focus,
+.ProductCard:active {
+    box-shadow: 10px 5px 40px 20px darken(#341cac, 10%);
+    cursor: pointer;
+}
+
+.ProductCard__image__container {
+    /* height: 200px;  */
+    width: 100%;
+  }
+
+  .ProductCard__title {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    margin-bottom: 0.4rem;
+    opacity: 0.7;
+  }
+
+  .ProductCard__price {
+    text-align: center;
+    display: block;
+    font-size: 1.1rem;
+    opacity: 0.5;
+    margin-bottom: 0.4rem;
+  }
+  
+  .ProductCard__option_align {
+    text-align: center;
+  }
+
+  .ProductCard__option__textbox {
+    width: 50px;
+  }
+
+  /* .button_align {
+    position: relative;
+    
+  } */
+
+  .button {
+    /* position: relative; */
+    bottom: 30px;
+    /* margin-left:-50px; */
+    /* left: 50%; */
+    background-color: #2752ff;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    padding: 10px 17px;
+    cursor: pointer;
+  }
+
+  .button:hover,
+  .button:focus {
+    background-color: #222222;
+  }
+  
+  .button:disabled {
+    background: #bfbfbf;
+    cursor: not-allowed;
+  }

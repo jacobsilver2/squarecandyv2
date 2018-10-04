@@ -1,11 +1,12 @@
 import React, { Component, Fragment } from 'react';
+import { Transition } from 'react-spring'
 import styles from './App.module.css';
 import Products from './components/Products/Products';
 import Cart from './components/Cart/Cart';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import { Toggle } from 'Utilities';
-import { Modal } from 'Elements';
+import { Modal, Card } from 'Elements';
 
 class App extends Component {
   state = {
@@ -109,6 +110,7 @@ class App extends Component {
                 </Fragment>
             )}
           </Toggle>
+
           <div className={styles.App__title}>
             <h1>Square Candy</h1>
           </div>
@@ -132,5 +134,7 @@ class App extends Component {
     );
   }
 }
+
+
 
 export default App;
