@@ -1,14 +1,19 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import styles from './App.module.css';
 import Products from './components/Products/Products';
 import Cart from './components/Cart/Cart';
+import About from './components/About/About';
+import Contact from './components/Contact/Contact';
+import { Toggle } from 'Utilities';
+import { Modal } from 'Elements';
 
 class App extends Component {
   state = {
     isCartOpen: false,
     checkout: { lineItems: [] },
     products: [],
-    shop: {}
+    shop: {},
+    showComponent: false
   };
 
   componentDidMount() {
@@ -72,6 +77,13 @@ class App extends Component {
     })
   }
 
+  // handleModalClick = () => {
+  //   console.log("I was called")
+  //   this.setState({
+  //     showComponent: !this.state.showComponent
+  //   })
+  // }
+
   render() {
     return (
       <div className={styles.App}>
@@ -81,25 +93,42 @@ class App extends Component {
               <button className={styles.App__view_cart} onClick={()=> this.setState({isCartOpen: true})}>Cart</button>
             </div>
           }
-          <div className={styles.About}>About</div>
-          <div className={styles.Contact}>Contact</div>
+          <Toggle>
+            {({on, toggle}) => (
+              <Fragment>
+                <div className={styles.About} onClick={toggle}>About</div>
+                <Modal on={on} toggle={toggle}><About /></Modal>
+                </Fragment>
+            )}
+          </Toggle>
+          <Toggle>
+            {({on, toggle}) => (
+              <Fragment>
+                <div className={styles.Contact} onClick={toggle}>Contact</div>
+                <Modal on={on} toggle={toggle}><Contact /></Modal>
+                </Fragment>
+            )}
+          </Toggle>
           <div className={styles.App__title}>
             <h1>Square Candy</h1>
           </div>
         </header>
-        <Products 
-          products={this.state.products}
-          client={this.props.client}
-          addVariantToCart={this.addVariantToCart}
-        />
-        <Cart 
-          checkout={this.state.checkout}
-          isCartOpen={this.state.isCartOpen}
-          handleCartClose={this.handleCartClose}
-          updateQuantityInCart={this.updateQuantityInCart}
-          removeLineItemInCart={this.removeLineItemInCart}
-        />
-      </div>
+
+
+          <Products 
+            products={this.state.products}
+            client={this.props.client}
+            addVariantToCart={this.addVariantToCart}
+          />
+          <Cart 
+            checkout={this.state.checkout}
+            isCartOpen={this.state.isCartOpen}
+            handleCartClose={this.handleCartClose}
+            updateQuantityInCart={this.updateQuantityInCart}
+            removeLineItemInCart={this.removeLineItemInCart}
+          />
+        </div>
+      
     );
   }
 }

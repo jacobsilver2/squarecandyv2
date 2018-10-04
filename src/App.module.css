@@ -105,12 +105,16 @@
    display: flex;
  }
 
- .About {
+ .About,
+ .About:hover {
   text-align: left;
+  cursor: pointer;
  }
 
- .Contact {
+ .Contact,
+ .Contact:hover {
   text-align: left;
+  cursor: pointer;
  }
  
  
@@ -195,4 +199,6 @@
    background: #fbefee;
    color: #c23628;
  }
+
+ 
  

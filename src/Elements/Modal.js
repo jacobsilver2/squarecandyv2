@@ -5,8 +5,12 @@ import Icon from './Icon';
 import { Card } from './Cards';
 
 export default class Modal extends Component {
+
+
   render() {
     const { children, toggle, on } = this.props;
+
+
     return (
       <Portal>
         {on && (
