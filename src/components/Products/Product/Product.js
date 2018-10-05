@@ -1,8 +1,5 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 // import VariantSelector from '../../VariantSelector/VariantSelector';
-// import { Toggle } from 'Utilities';
-// import { Modal } from 'Elements';
-// import styles from './Product.module.css';
 import { Spring } from 'react-spring' 
 import ProductCard from '../ProductCard/ProductCard';
 
@@ -67,15 +64,17 @@ class Product extends Component {
         // });
         
         return (
+
             <Spring
                 from={{height: 280}}
                 to={{
                     height: toggle ? 560 : 280, 
-                    width: toggle ?  560 : 280
+                    width: toggle ?  560 : 280,
+                    rotation: toggle ? '0deg' : '45deg',
                     }}
+                children={ProductCard}
                 toggle={this.toggle}
                 on={this.state.toggle}
-                children={ProductCard}
                 product={this.props.product}
                 variantImage={variantImage}
                 variant={variant}

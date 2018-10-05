@@ -1,12 +1,12 @@
+
 import React, { Component, Fragment } from 'react';
-import { Transition } from 'react-spring'
 import styles from './App.module.css';
 import Products from './components/Products/Products';
 import Cart from './components/Cart/Cart';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import { Toggle } from 'Utilities';
-import { Modal, Card } from 'Elements';
+import { Modal } from 'Elements';
 
 class App extends Component {
   state = {
@@ -78,12 +78,6 @@ class App extends Component {
     })
   }
 
-  // handleModalClick = () => {
-  //   console.log("I was called")
-  //   this.setState({
-  //     showComponent: !this.state.showComponent
-  //   })
-  // }
 
   render() {
     return (
@@ -97,7 +91,7 @@ class App extends Component {
           <Toggle>
             {({on, toggle}) => (
               <Fragment>
-                <div className={styles.About} onClick={toggle}>About</div>
+                <button className={styles.About} onClick={toggle}>About</button>
                 <Modal on={on} toggle={toggle}><About /></Modal>
                 </Fragment>
             )}
@@ -105,7 +99,7 @@ class App extends Component {
           <Toggle>
             {({on, toggle}) => (
               <Fragment>
-                <div className={styles.Contact} onClick={toggle}>Contact</div>
+                <button className={styles.Contact} onClick={toggle}>Contact</button>
                 <Modal on={on} toggle={toggle}><Contact /></Modal>
                 </Fragment>
             )}

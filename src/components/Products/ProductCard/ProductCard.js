@@ -1,11 +1,11 @@
 import React from 'react';
-import styles from './ProductCard.module.css'
+import styles from './ProductCard.module.css';
 
 
-const productCard = ({height, opacity, toggle, on, width, product, variantImage, variant, variantQuantity, handleQuantityChange, addVariantToCart}) => {
+const productCard = ({height, toggle, on, width, rotation, product, variantImage, variant, variantQuantity, handleQuantityChange, addVariantToCart}) => {
     
     return (
-            <div className={styles.ProductCard} style={{height, opacity, width}} onClick={toggle}>
+            <div className={styles.ProductCard} style={{height, width, transform: `rotate(${rotation})`}} onClick={toggle}>
                 <div className={styles.ProductCard__image__container}>
                     {product.images.length ? <img src={variantImage.src} alt={`${product.title}`}/> : null}
                 </div>

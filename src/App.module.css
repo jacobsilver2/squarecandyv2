@@ -1,7 +1,3 @@
-
- 
- /* BASE APP
-  * ============================== */
  .App__header {
    background-color: #222;
    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/header.jpg");
@@ -34,7 +30,7 @@
  }
  
  .App__view_cart {
-   font-size: 15px;
+   font-size: 20px;
    border: none;
    background: none;
    cursor: pointer;
@@ -107,12 +103,20 @@
 
  .About,
  .About:hover {
+  border: none;
+  background: none;
+  color: white;
+  font-size: 20px;
   text-align: left;
   cursor: pointer;
  }
 
  .Contact,
  .Contact:hover {
+  border: none;
+  background: none;
+  color: white;
+  font-size: 20px;
   text-align: left;
   cursor: pointer;
  }
